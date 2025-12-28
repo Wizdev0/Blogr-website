@@ -1,0 +1,1391 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+.head-links{
+    padding: 40px;
+    max-height: 600px;
+    border-bottom-left-radius: 60px;
+    font-family: "Overpass", sans-serif;
+      min-height: 70vh;
+
+  background:
+    linear-gradient(
+      rgba(255, 143, 113, 0.9),
+      rgba(255, 61, 84, 0.9)
+    ),
+    url("assets/bg-pattern-intro-desktop.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+}
+
+.link-and-register{
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+    gap: 70px;
+}
+
+
+.head-links-list ul{
+    display: flex;
+    position: relative;
+    gap: 50px;
+    list-style: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+.head-links ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* CONNECT DROP DOWN */
+
+.connect-dropdown ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: -5px;
+    gap: 10px;
+    background-color: white;
+    color: grey;
+    padding: 25px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    position: absolute;
+      opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+    
+} 
+
+.connect-dropdown ul.active{
+    text-decoration: none;
+     opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.connect-dropdown ul li:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.arrow-connect{
+    transition: transform 0.3s ease;
+    display: inline-block;
+    
+}
+
+.arrow-connect.show{
+    transform: rotate(180deg);
+}
+
+/* Mobile arrow */
+.mobile-arrow{
+    display: none;
+}
+
+
+.sign-up{
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    padding: 10px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.sign-up:hover{
+    color: white;
+    background-color: hsl(13, 85%, 73%);
+    cursor: pointer;
+}
+
+.head-word{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    color: white;
+    font-family: "Overpass", sans-serif;
+    
+}
+
+.head-h1{
+    font-weight: 500;
+    font-size: 60px;
+}
+
+.head-p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(241, 239, 239);
+}
+
+.proceed{
+    display: flex;
+    gap: 40px;
+    margin-top: 25px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+}
+
+.proceed-one{
+    font-size: 17px;
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    padding: 10px;
+    width: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.proceed-one:hover{
+    cursor: pointer;
+    color: white;
+    background-color: hsl(13, 85%, 73%);
+    border: 1px solid white;
+}
+
+.proceed-two{
+    font-size: 17px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 30px;
+     display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 140px;
+}
+
+.proceed-two:hover{
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    cursor: pointer;
+}
+
+.main-head-h2{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.head-h2{
+    font-family: "Ubuntu", sans-serif;
+    color: hsl(208, 49%, 24%);
+    font-size: 35px;
+}
+
+/* FIRST CARD */
+
+.first-card{
+    display: flex;
+    margin-top: -70px;
+    justify-content: space-between;
+    position: relative;
+  overflow-x: hidden;   /* 🔑 stops horizontal scroll */
+  display: flex;
+  align-items: center;
+    
+}
+
+.first-card-image {
+  position: relative;
+  flex: 1;
+}
+
+.first-card-pic {
+    margin-left: 20%;
+    max-width: none;      /* IMPORTANT */
+    width: 65vw;
+}
+
+/* FIRST CARD WORDS */
+
+.first-card-words{
+    margin-top: 6vw;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: "Ubuntu", sans-serif;
+    width: 100vw;
+}
+
+/* FIRST CARD ONE */
+
+.first-card-words-one{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.h3-first-one{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+}
+
+.p-first-one{
+    width: 36vw;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.9;
+    color: hsl(207, 13%, 34%);
+    font-weight: 410;
+}
+
+/* FIRST CARD TWO */
+
+.first-card-words-two{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.h3-first-two{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+}
+
+.p-first-two{
+    width: 36vw;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.9;
+    font-weight: 410;
+    color: hsl(207, 13%, 34%);
+}
+
+/* SECOND CARD */
+
+.second-card{
+    margin-top: 10vw;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    /* background-color:  hsl(240, 10%, 16%); */
+    background: hsl(240, 10%, 16%) url("assets/bg-pattern-circles.svg")  ;
+
+    height: 350px; 
+
+    background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 40% auto;
+  border-bottom-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
+
+.second-card-words{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.h3-second-card{
+    color: white;
+    font-size: 25px;
+    font-family: "Overpass", sans-serif;
+}
+
+.p-second-card{
+    color: white;
+    font-family: "Overpass", sans-serif;
+    width: 70%;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* THIRD CARD */
+
+.third-card{
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-between;
+}
+
+.third-card-image{
+    position: relative;
+    flex: 1;
+}
+
+.third-card-pic{
+    margin-left: -29%;
+    max-width: none;      /* IMPORTANT */
+    width: 60vw;
+  
+}
+
+/* THIRD CARD WORDS */
+
+.third-card-words{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: -40px;
+}
+
+.third-card-words-one{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: -10px;
+}
+
+.h3-third-one{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+    font-family: "Overpass", sans-serif;
+}
+
+.p-third-one{
+    line-height: 1.7;
+    font-family: "Overpass", sans-serif;
+    color: grey;
+    width: 90%;
+}
+
+/* SECOND PARAGRAPH OF THE THIRD CARD */
+
+.third-card-words-two{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.h3-third-two{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+    font-family: "Overpass", sans-serif;
+}
+
+.p-third-two{
+    line-height: 1.7;
+    font-family: "Overpass", sans-serif;
+    color: grey;
+    width: 90%;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top: 60px;
+    background-color:  hsl(240, 10%, 16%);
+    padding: 100px;
+    border-top-right-radius: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20%;
+}
+
+.footer-logo{
+    width: 10%;
+    height: 30%;
+    
+}
+
+/* FOOTER LIST */
+
+.footer-list{
+    display: flex;
+    gap: 90%;
+    margin-top: 8px;
+    font-family: "Overpass", sans-serif;
+} 
+
+.footer-list:hover{
+    cursor: pointer;
+}
+
+
+/* FIRST FOOTER LIST */
+.list-one{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-one-h4{
+    color: white;
+    font-size: 20px;
+}
+
+.list-one-items ul{
+    color: grey;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-one-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* SECOND FOOTER LIST */
+.list-two{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-two-h4{
+    color: white;
+    font-size: 20px;
+}
+
+.list-two-items ul{
+    color: grey;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-two-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* THIRD FOOTER LIST */
+.list-three{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-three-h4{
+    color: white;
+    font-size: 20px;
+}
+
+.list-three-items ul{
+    color: grey;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-three-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* MOBILE FEATURES NOT FOR DESKTOP VIEW */
+
+.open, .close{
+    display: none;
+}
+
+.mobile-border{
+    display: none;
+}
+.mobile-issues{
+    display: flex;
+    justify-content: space-between;
+}
+
+.register{
+    display: flex;
+    gap: 40px;
+    margin-left: 40vw;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    align-items: center;
+}
+
+/* END OF DESKTOP VIEW */
+
+/* MOBILE VIEW */
+
+@media only screen and (max-width:600px) {
+
+    .head-links{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom-left-radius: 60px;
+    font-family: "Overpass", sans-serif;
+    height: 200%;
+  background:
+    linear-gradient(
+      rgba(255, 143, 113, 0.9),
+      rgba(255, 61, 84, 0.9)
+    ),
+    url("assets/bg-pattern-intro-mobile.svg");
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+
+}
+
+/* OPEN */
+
+.open{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+     position: absolute;
+    top: 70px;
+    right: 20px;
+    margin: 0;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.open.live{
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* CLOSE */
+
+.close{
+    display: none;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 60px;  
+    opacity: 0; 
+    transform: translateY(20px);
+}
+
+.close.live{
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.link-and-register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+    
+}
+
+
+.head-logo{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    position: absolute;
+    top: 70px;
+}
+
+.head-links-list ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    color: grey;
+    font-weight: 600;
+    font-size: 23px;
+    /* background-color: white;
+    padding: 20px;
+    width: 90vw;
+    max-height: 550px;
+    height: 80vh;
+    border-radius: 10px;
+    gap: 30px;
+     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+     z-index: 1000; */
+     
+}
+
+
+
+.head-links-list ul li:first-child{
+    margin-top: 20px;
+}
+
+
+.head-links ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mobile-border{
+    border: 1px solid grey;
+    width: 78vw;
+    opacity: 0.3;
+    display: flex;
+}
+
+
+/* CONNECT DROP DOWN */
+
+.connect-dropdown{
+    display: flex;
+    margin-left: -100px;
+}
+
+.connect-dropdown ul{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin-top: 10px;
+    gap: 15px;
+    background-color: hsl(210, 29%, 92%);
+    color: hsl(210, 12%, 57%);
+    padding: 25px;
+    border-radius: 5px;
+    position: absolute;
+      opacity: 0;
+  transform: none;
+  box-shadow: none;
+  pointer-events: none;
+    height: 22vh;
+    opacity: 0.3s ease,
+    transform 0.3s ease;
+    
+    
+} 
+
+.connect-dropdown ul li:first-child{
+    margin-top: -2px;
+}
+
+.connect-dropdown ul.active{
+    text-decoration: none;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.connect-dropdown ul li:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.arrow-connect{
+    display: none;
+    
+}
+
+.arrow-connect.show{
+    transform: rotate(180deg);
+}
+
+/* Mobile arrow */
+.mobile-arrow{
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: 15px;
+}
+
+.mobile-arrow-one{
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: 15px;
+}
+.mobile-arrow-one.show{
+    transform: rotate(180deg);
+}
+
+/* MOBILE ISSUES */
+
+.mobile-issues{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    color: grey;
+    font-weight: 600;
+    font-size: 23px;
+    background-color: white;
+    padding: 20px;
+    width: 100vw;
+    max-height: 600px;
+    height: 100vh;
+    border-radius: 10px;
+    gap: 30px;
+     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+     z-index: 1000;
+     margin-top: 10%;
+
+      transform: translateX(30px);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.mobile-issues.live{
+     transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40%;
+    margin-left: -15px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    align-items: center;
+    z-index: 1000;
+    position: relative;
+    bottom: 0;
+}
+
+.sign-up{
+   padding: 16px;
+   background: linear-gradient(
+     to right, rgba(255, 143, 113, 0.9),
+      rgba(255, 61, 84, 0.9)
+    );
+   border-radius: 0;
+   color: white;
+   font-size: 20px;
+   border-radius: 30px;
+}
+
+
+.login{
+    color: hsl(208, 49%, 24%);
+    font-size: 20px;
+}
+
+.head-word{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Overpass", sans-serif;
+    position: absolute;
+    margin-top: 54%;
+}
+
+.head-h1{
+    font-weight: 500;
+    font-size: 36px;
+    width: 85vw;
+    display: flex;
+    align-self: center;
+    text-align: center;
+}
+
+.head-p{
+    margin-top: 10px;
+    font-size: 20px;
+    width: 80vw;
+    color: rgb(241, 239, 239);
+    text-align: center;
+}
+
+.proceed{
+    display: flex;
+    margin-top: 25px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.proceed-one{
+    font-size: 20px;
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    padding: 15px;
+    width: 170px;
+    border-radius: 30px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.proceed-one:hover{
+    cursor: pointer;
+    color: white;
+    background-color: hsl(13, 85%, 73%);
+    border: 1px solid white;
+}
+
+.proceed-two{
+    font-size: 20px;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 30px;
+     display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 170px;
+}
+
+.proceed-two:hover{
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    cursor: pointer;
+}
+
+.main-head-h2{
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.head-h2{
+    font-family: "Ubuntu", sans-serif;
+    color: hsl(208, 49%, 24%);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* FIRST CARD */
+
+.first-card{
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.first-card-image {
+  order: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-card-pic {
+  width: 100vw;
+  margin-left: 0;
+}
+
+/* FIRST CARD WORDS */
+
+.first-card-words{
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: "Ubuntu", sans-serif;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+}
+
+/* FIRST CARD ONE */
+
+.first-card-words-one{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h3-first-one{
+    color: hsl(208, 49%, 24%);
+    font-size: 40px;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: -60px;
+    font-weight: 300;
+}
+
+.p-first-one{
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.9;
+    color: hsl(207, 13%, 34%);
+    font-weight: 410;
+    width: 100vw;
+    margin-left: -60px;
+}
+
+/* FIRST CARD TWO */
+
+.first-card-words-two{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h3-first-two{
+    color: hsl(208, 49%, 24%);
+    font-size: 40px;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: -60px;
+    font-weight: 300;
+}
+
+.p-first-two{
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.9;
+    color: hsl(207, 13%, 34%);
+    font-weight: 410;
+    width: 95vw;
+    margin-left: -60px;
+}
+
+
+/* SECOND CARD */
+
+.second-card{
+    margin-top: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color:  hsl(240, 10%, 16%); */
+    background: hsl(240, 10%, 16%) url("assets/bg-pattern-circles.svg")  ;
+
+    height: 80vh; 
+
+    background-repeat: no-repeat;
+  background-position: center -180%;
+  background-size: 130vw auto;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+.second-card-pic{
+    margin-top: -80%;
+    margin-left: 10px;
+    width: 100vw;
+}
+
+.second-card-words{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -30px;
+}
+
+.h3-second-card{
+    color: white;
+    font-size: 40px;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+    font-weight: 300;
+}
+
+.p-second-card{
+    color: white;
+    font-family: "Overpass", sans-serif;
+    width: 70%;
+    line-height: 1.7;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* THIRD CARD */
+
+.third-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.third-card-image{
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-card-pic{
+    max-width: none;      /* IMPORTANT */
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin-left: 35px;
+}
+
+/* THIRD CARD WORDS */
+
+.third-card-words{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 60px;
+}
+
+.third-card-words-one{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: -10px;
+}
+
+.h3-third-one{
+    color: hsl(208, 49%, 24%);
+    font-size: 40px;
+    font-family: "Overpass", sans-serif;
+    display: flex;
+    align-self: center;
+}
+
+.p-third-one{
+    line-height: 1.7;
+    font-family: "Overpass", sans-serif;
+    color: grey;
+    width: 85%;
+    text-align: center;
+    display: flex;
+    align-self: center;
+}
+
+/* SECOND PARAGRAPH OF THE THIRD CARD */
+
+.third-card-words-two{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.h3-third-two{
+    color: hsl(208, 49%, 24%);
+    font-size: 40px;
+    font-family: "Overpass", sans-serif;
+    display: flex;
+    align-self: center;
+}
+
+.p-third-two{
+    line-height: 1.7;
+    font-family: "Overpass", sans-serif;
+    color: grey;
+    width: 85%;
+    text-align: center;
+    display: flex;
+    align-self: center;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top: 60px;
+    background-color:  hsl(240, 10%, 16%);
+    border-top-right-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20%;
+    padding: 3cm;
+    width: 100%;
+}
+
+.footer-logo{
+    width: 10%;
+    height: 30%;
+    width: 40vw;
+}
+
+/* FOOTER LIST */
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 90%;
+    margin-top: 40%;
+    font-family: "Overpass", sans-serif;
+} 
+
+.footer-list:hover{
+    cursor: pointer;
+}
+
+
+/* FIRST FOOTER LIST */
+.list-one{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.list-one-h4{
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.list-one-items ul{
+    color: grey;
+    font-size: 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.list-one-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* SECOND FOOTER LIST */
+.list-two{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50%;
+}
+
+.list-two-h4{
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.list-two-items ul{
+    color: grey;
+    font-size: 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.list-two-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* THIRD FOOTER LIST */
+.list-three{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50%;
+}
+
+.list-three-h4{
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.list-three-items ul{
+    color: grey;
+    font-size: 25px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.list-three-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .head-links-list ul li{
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* FOOTER */
+
+.footer{
+    margin-top: 60px;
+    background-color:  hsl(240, 10%, 16%);
+    padding: 90px;
+    border-top-right-radius: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20%;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.footer-logo{
+    width: 10%;
+    height: 30%;
+    
+}
+
+/* FOOTER LIST */
+
+.footer-list{
+    display: flex;
+    gap: 30%;
+    margin-top: 8px;
+    font-family: "Overpass", sans-serif;
+} 
+
+.footer-list:hover{
+    cursor: pointer;
+}
+
+
+/* FIRST FOOTER LIST */
+.list-one{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-one-h4{
+    color: white;
+    font-size: 20px;
+}
+
+.list-one-items ul{
+    color: grey;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-one-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* SECOND FOOTER LIST */
+.list-two{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-two-h4{
+    color: white;
+    font-size: 20px;
+}
+
+.list-two-items ul{
+    color: grey;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-two-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* THIRD FOOTER LIST */
+.list-three{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.list-three-h4{
+    color: white;
+    font-size: 20px;
+}
+
+.list-three-items ul{
+    color: grey;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-three-items ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.register{
+    margin-left: 20vw;
+}
+
+.head-h2{
+    margin-top: -9%;
+}
+
+.mobile-arrow, .mobile-arrow-one{
+    display: none;
+}
+
+.arrow-connect{
+    display: inline-block;
+    margin-left: 
+    5px;
+}
+
+}
