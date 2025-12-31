@@ -1316,7 +1316,7 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
-    gap: 2px;
+    gap: 10px;
 }
 
 .logo{
@@ -1327,7 +1327,7 @@
 
 .head-links-list ul {
     position: relative;
-    gap: 20px;
+    gap: 16px;
     list-style: none;
     color: white;
     font-weight: 600;
