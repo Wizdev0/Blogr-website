@@ -1716,7 +1716,7 @@
 
 .footer-list{
     display: flex;
-    gap: 70%;
+    gap: 50%;
     margin-top: 8px;
     font-family: "Overpass", sans-serif;
 } 
