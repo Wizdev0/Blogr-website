@@ -537,14 +537,16 @@
         width: 100%;
     }
 
+
     .head-links{
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    background-attachment: fixed;
+    padding: 20px;
     border-bottom-left-radius: 60px;
     font-family: "Overpass", sans-serif;
     height: 200%;
-    width: 100%;
+    width: 102%;
     margin-right: 0;
     margin: 0;
   background:
@@ -664,7 +666,11 @@
 
 .connect-dropdown{
     display: flex;
-    margin-left: -100px;
+    justify-content: center;
+    width: 90%;
+    align-self: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .connect-dropdown ul{
@@ -844,17 +850,17 @@
 }
 
 .proceed-one{
-    font-size: 18px;
+    font-size: 16px;
     background-color: white;
     color: hsl(13, 100%, 72%);
-    padding: 15px;
+    padding: 18px;
     border-radius: 30px;
     display: flex;
     align-self: center;
-    justify-content: center;
-    width: 150px;
+    justify-self: center;
+    width: 140px;
     text-align: center;
-    margin-left: 20px;
+    margin-left: -10px;
     margin-right: 0;
     height: 55px;
 }
@@ -867,14 +873,14 @@
 }
 
 .proceed-two{
-    font-size: 19px;
+    font-size: 16px;
     border: 1px solid white;
     padding: 15px;
     border-radius: 30px;
-     display: flex;
+    display: flex;
     align-self: center;
     justify-content: center;
-    width: 150px;
+    width: 140px;
 
 }
 
@@ -1006,7 +1012,7 @@
 
 .second-card{
     margin-top: 80%;
-    width: 101%;
+    width: 102%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1161,7 +1167,7 @@
     flex-direction: column;
     gap: 20%;
     padding: 3cm;
-    width: 101%;
+    width: 102%;
 }
 
 .footer-logo{
@@ -1284,24 +1290,420 @@
 }
 
 
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .head-links-list ul li{
-    display: flex;
-    flex-direction: row;
-  }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .head-links{
+    padding: 40px;
+    max-height: 600px;
+    border-bottom-left-radius: 60px;
+    font-family: "Overpass", sans-serif;
+      min-height: 50vh;
+    width: 100%;
+  background:
+    linear-gradient(
+      rgba(255, 143, 113, 0.9),
+      rgba(255, 61, 84, 0.9)
+    ),
+    url("assets/bg-pattern-intro-desktop.svg");
 
-  /* FOOTER */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  position: relative;
+
+}
+
+.link-and-register{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 2px;
+}
+
+.logo{
+    margin-top: -30px;
+    margin-left: -20px;
+    width: 90px;
+}
+
+.head-links-list ul {
+    position: relative;
+    gap: 20px;
+    list-style: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+
+.head-links ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* CONNECT DROP DOWN */
+
+.connect-dropdown ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: -5px;
+    gap: 10px;
+    background-color: white;
+    color: grey;
+    padding: 25px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    position: absolute;
+      opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+    
+} 
+
+.connect-dropdown ul.active{
+    text-decoration: none;
+     opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.connect-dropdown ul li:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.arrow-connect{
+    transition: transform 0.3s ease;
+    display: inline-block;
+    
+}
+
+.arrow-connect.show{
+    transform: rotate(180deg);
+}
+
+/* Mobile arrow */
+.mobile-arrow{
+    display: none;
+}
+
+.register{
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up{
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    padding: 10px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+   
+}
+
+.sign-up:hover{
+    color: white;
+    background-color: hsl(13, 85%, 73%);
+    cursor: pointer;
+}
+
+.head-word{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    color: white;
+    font-family: "Overpass", sans-serif;
+    
+}
+
+.head-h1{
+    font-weight: 500;
+    font-size: 60px;
+}
+
+.head-p{
+    margin-top: 10px;
+    font-size: 20px;
+    color: rgb(241, 239, 239);
+}
+
+.proceed{
+    display: flex;
+    gap: 40px;
+    margin-top: 25px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+}
+
+.proceed-one{
+    font-size: 17px;
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    padding: 10px;
+    width: 150px;
+    border-radius: 30px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.proceed-one:hover{
+    cursor: pointer;
+    color: white;
+    background-color: hsl(13, 85%, 73%);
+    border: 1px solid white;
+}
+
+.proceed-two{
+    font-size: 17px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 30px;
+     display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 140px;
+}
+
+.proceed-two:hover{
+    background-color: white;
+    color: hsl(13, 100%, 72%);
+    cursor: pointer;
+}
+
+.main-head-h2{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.head-h2{
+    font-family: "Ubuntu", sans-serif;
+    color: hsl(208, 49%, 24%);
+    font-size: 35px;
+}
+
+/* FIRST CARD */
+
+.first-card{
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-between;
+    position: relative;
+  overflow-x: hidden; 
+  align-items: center;
+  width: 100%;
+    gap: 30%;
+    margin-right: 0;
+    
+}
+
+.first-card-image {
+  position: relative;
+  flex: 1;
+}
+
+.first-card-pic {
+    margin-left: -20%;
+    max-width: none;      /* IMPORTANT */
+    width: 65vw;
+    
+}
+
+/* FIRST CARD WORDS */
+
+.first-card-words{
+    margin-top: 6vw;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: "Ubuntu", sans-serif;
+    width: 100vw;
+}
+
+/* FIRST CARD ONE */
+
+.first-card-words-one{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.h3-first-one{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+}
+
+.p-first-one{
+    width: 36vw;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.9;
+    color: hsl(207, 13%, 34%);
+    font-weight: 410;
+}
+
+/* FIRST CARD TWO */
+
+.first-card-words-two{
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.h3-first-two{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+}
+
+.p-first-two{
+    width: 36vw;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 1.9;
+    font-weight: 410;
+    color: hsl(207, 13%, 34%);
+}
+
+/* SECOND CARD */
+
+.second-card{
+    margin-top: 10vw;
+    display: flex;
+    align-items: center;
+    gap: 10%;
+    /* background-color:  hsl(240, 10%, 16%); */
+    background: hsl(240, 10%, 16%) url("assets/bg-pattern-circles.svg")  ;
+
+    height: 350px; 
+
+    background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 40% auto;
+  border-bottom-left-radius: 70px;
+  border-top-right-radius: 70px;
+}
+
+.second-card-words{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.h3-second-card{
+    color: white;
+    font-size: 25px;
+    font-family: "Overpass", sans-serif;
+}
+
+.p-second-card{
+    color: white;
+    font-family: "Overpass", sans-serif;
+    width: 70%;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* THIRD CARD */
+
+.third-card{
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-between;
+}
+
+.third-card-image{
+    position: relative;
+    flex: 1;
+}
+
+.third-card-pic{
+    margin-left: -29%;
+    max-width: none;      /* IMPORTANT */
+    width: 60vw;
+  
+}
+
+/* THIRD CARD WORDS */
+
+.third-card-words{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-left: -40px;
+}
+
+.third-card-words-one{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: -10px;
+}
+
+.h3-third-one{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+    font-family: "Overpass", sans-serif;
+}
+
+.p-third-one{
+    line-height: 1.7;
+    font-family: "Overpass", sans-serif;
+    color: grey;
+    width: 90%;
+}
+
+/* SECOND PARAGRAPH OF THE THIRD CARD */
+
+.third-card-words-two{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.h3-third-two{
+    color: hsl(208, 49%, 24%);
+    font-size: 25px;
+    font-family: "Overpass", sans-serif;
+}
+
+.p-third-two{
+    line-height: 1.7;
+    font-family: "Overpass", sans-serif;
+    color: grey;
+    width: 90%;
+}
+
+/* FOOTER */
 
 .footer{
     margin-top: 60px;
     background-color:  hsl(240, 10%, 16%);
-    padding: 90px;
+    padding: 100px;
     border-top-right-radius: 80px;
     display: flex;
     justify-content: flex-start;
     gap: 20%;
-    width: 100vw;
-    overflow: hidden;
 }
 
 .footer-logo{
@@ -1314,7 +1716,7 @@
 
 .footer-list{
     display: flex;
-    gap: 30%;
+    gap: 70%;
     margin-top: 8px;
     font-family: "Overpass", sans-serif;
 } 
@@ -1399,22 +1801,19 @@
     text-decoration: underline;
 }
 
-.register{
-    margin-left: 20vw;
-}
+/* MOBILE FEATURES NOT FOR DESKTOP VIEW */
 
-.head-h2{
-    margin-top: -9%;
-}
-
-.mobile-arrow, .mobile-arrow-one{
+.open, .close{
     display: none;
 }
 
-.arrow-connect{
-    display: inline-block;
-    margin-left: 
-    5px;
+.mobile-border{
+    display: none;
 }
+.mobile-issues{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 }
